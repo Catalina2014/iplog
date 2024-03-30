@@ -36,13 +36,13 @@ def count():
         if counter is None:
             counter = Counters()
             counter.id = 1
-            counter.count = 1
+            counter.count = 10
             counter.created_at = datetime.now()
             counter.updated_at = datetime.now()
             insert_counter(counter)
         else:
             counter.id = 1
-            counter.count += 1
+            counter.count += 10
             counter.updated_at = datetime.now()
             update_counterbyid(counter)
         return make_succ_response(counter.count)
